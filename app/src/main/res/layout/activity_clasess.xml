@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><!-- res/layout/classes_screen.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar for Title, Back Icon, and Search Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/class_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main_color">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/class_toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Classes"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <!-- Search Bar -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/class_searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search for Classes" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Classes List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/class_toolbar"
+        android:padding="16dp" />
+
+</RelativeLayout>

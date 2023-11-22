@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Toolbar for Title, Back Icon, and Search Bar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main_color">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <!-- Card for Calendar -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/calendarCard"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/calendarIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/calender" />
+
+                    <TextView
+                        android:id="@+id/calendarTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/calendarIcon"
+                        android:gravity="center"
+                        android:text="Calendar"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card for Programs -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/programmesCard"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/programIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/program" />
+
+                    <TextView
+                        android:id="@+id/programTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/programIcon"
+                        android:gravity="center"
+                        android:text="Programs"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card for Classes -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/classesCard"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/classesIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/clasess" />
+
+                    <TextView
+                        android:id="@+id/classesTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/classesIcon"
+                        android:gravity="center"
+                        android:text="Classes"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
